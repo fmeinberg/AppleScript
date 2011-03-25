@@ -1,0 +1,23 @@
+
+
+[Installation]
+
+To make the package available to Mathematica, move the .m file to a location on your $Path. Default values are:
+
+ToFileName[$UserBaseDirectory,"Applications"]
+
+ToFileName[$BaseDirectory,"Applications"]
+
+You load a Mathematica package that is located within a directory in your $Path by running
+
+<<PackageName`
+
+or
+
+Needs["PackageName`"]
+
+For more details on the different modalities of loading packages into Mathematica, consult the documentation.
+
+Enjoy.
+
+-- FM
