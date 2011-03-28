@@ -1,22 +1,38 @@
 
 
+
 [Installation]
 
-To make the package available to Mathematica, move the .m file to a location on your $Path. Default values are:
+If you are viewing this README file on GitHub, you can download this package by clicking on the Download button above.
+
+Once you have downloaded the package, there are multiple ways to load it into Mathematica. Some of theem are:
+
+(1) The simplest way to load this package into Mathematica is to use Get[file], where file is the full path of the .m file that comes within this package. However, this will fail if there are dependencies and you haven't loaded the other required packages.
+
+(2) To make a package available to Mathematica on a permnent basis, you should copy the package folder to a location on your $Path. Default values for placing packages are:
 
 ToFileName[$UserBaseDirectory,"Applications"]
 
 ToFileName[$BaseDirectory,"Applications"]
 
-You load a Mathematica package that is located within a directory in your $Path by running
+(3) You can also evaluate a statement that adds a directory of your choice to the $Path (such as: AppendTo[$Path, myDirectory] ). If you do that, you will need to run that statement everytime you run Mathematica, or include it in your init.m file.
 
-<<PackageName`
+Once a package's directory has been added to the $Path, you can load a Mathematica package that is located within a directory in your $Path by running
+
+<<PackageName` (same as Get["PackageName`"] )
 
 or
 
 Needs["PackageName`"]
 
-For more details on the different modalities of loading packages into Mathematica, consult the documentation.
+For more details on the different modalities of loading packages into Mathematica, check the documentation.
+
+[Documentation]
+
+Documentation for this package is found in the accompanying .nb file.
+
+This package needs better documentation: both usage messages and documentation pages. If you want to help, please contact me.
+
 
 Enjoy.
 
